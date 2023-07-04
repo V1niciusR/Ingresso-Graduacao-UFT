@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual Básico para o GitHub</title>
+    <link rel="icon" type="image/x-icon" href="/docs/images/github.svg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <link rel="stylesheet" href="./docs/css/style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Manual para o GitHub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Login no GitHub">Acesso</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#conteudos principais">Geral</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Funções e Comandos">Funções e Comandos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Criação de Projetos">Criação de Projetos</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item">
+                        <a class="social-icon" href="https://twitter.com/github"><i class="ri-twitter-line"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="social-icon" href="https://github.com/"><i class="ri-github-line"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="social-icon" href="https://www.instagram.com/github/"><i class="ri-instagram-line"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="social-icon" href="https://www.youtube.com/c/GitHub"><i class="ri-youtube-line"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home -->
+    <section id="home" class="d-flex align-items-center min-vh-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-2 fw-bold" data-aos="fade-up">Olá! Esse é o manual do <span class="text-brand">GitHub</span></h1>
+                    <h4 data-aos="fade-up" data-aos-delay="100" class="mt-3 mb-5">Feito para auxiliar no acesso ao site</h4>
+                    <div data-aos="fade-up" data-aos-delay="200"><a href="#Login no GitHub" class="btn btn-brand">Comece já</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Acesso ao GitHub -->
+    <section id="Login no GitHub" class="section-padding section-connector">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="setion-title text-center" data-aos="fade-up" data-aos-delay="100">
+                        <h1>Acessando o GitHub</h1>
+                        <p>As primeiras etapas para começar a usar o GitHub são criar uma conta, escolher um produto que se adapte melhor às suas necessidades, confirmar seu email, configurar a autenticação de dois fatores e ver seu perfil. <br> Há vários tipos de contas no GitHub. Toda pessoa que usar GitHub terá sua conta pessoal e poderá fazer parte de várias organizações e equipes. A sua conta pessoal é sua identidade em GitHub.com e representa você como indivíduo.</p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-5">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bp">
+                        <img src="./docs/images/p-1.jpg" alt="">
+                        <div class="bp-content pt-4">
+                            <h4>Como criar uma conta</h4>
+                            <p>Para se inscrever em uma conta na GitHub.com, acesse o site <a href="https://github.com/"><b>https://github.com/</b></a> e siga os prompts. Para manter a sua conta de GitHub segura, você deverá usar uma senha forte e exclusiva.</p>
+                            <a href="https://docs.github.com/pt/get-started/onboarding/getting-started-with-your-github-account" class="custom-link">
+                                <span>Saiba mais</span>
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bp">
+                        <img src="./docs/images/p-2.jpg" alt="">
+                        <div class="bp-content pt-4">
+                            <h4>Produtos do GitHub</h4>
+                            <p>Você pode escolher GitHub Free ou GitHub Pro para obter acesso a diferentes recursos da sua conta pessoal. Você pode fazer a atualização a qualquer momento se não tiver certeza qual o produto você deseja.</p>
+                            <a href="https://docs.github.com/pt/get-started/onboarding/getting-started-with-your-github-account" class="custom-link">
+                                <span>Saiba mais</span>
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bp">
+                        <img src="./docs/images/p-3.jpg" alt="">
+                        <div class="bp-content pt-4">
+                            <h4>Confirmação do E-mail</h4>
+                            <p>Para garantir que você possa utilizar todos os recursos do seu plano de GitHub, verifique o seu endereço de e-mail após inscrever-se em uma nova conta. Para obter mais informações, confira "Como confirmar seu endereço de email".</p>
+                            <a href="https://docs.github.com/pt/get-started/onboarding/getting-started-with-your-github-account" class="custom-link">
+                                <span>Saiba mais</span>
+                                <i class="ri-arrow-right-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo adicional -->
+    <section id="conteudos principais" class="section-padding section-connector">
+        <div class="container">
+            <div class="row">
+                <div class="col-12" data-aos="fade-up" data-aos-delay="100">
+                    <div class="setion-title text-center">
+                        <h1>Características em geral</h1>
+                        <p>Abaixo está a ser apresentado algumas Características em geral sobre o GitHub como, o que é; para o que ele serve; quais os planos referentes do GitHub; entre outros assuntos iniciais.</p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-5">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="100">
+                            <div class="eduexp p-5 pt-0">
+                                <h5>Introdução</h5>
+                                <small class="text-brand">O que é o GitHub</small>
+                                <p class="mb-0">GitHub é uma plataforma de hospedagem de código-fonte e arquivos com controle de versão usando o Git. Ele permite que programadores, utilitários ou qualquer usuário cadastrado na plataforma contribuam em projetos privados e/ou Open Source de qualquer lugar do mundo. Seu CEO é: Thomas Dohmke (15 de nov. de 2021–) e os seus Fundadores são: Tom Preston-Werner, Chris Wanstrath, Scott Chacon, P. J. Hyett.</p>
+                            </div>
+                        </div>
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                            <div class="eduexp p-5 pt-0">
+                                <h5>Para que serve</h5>
+                                <small class="text-brand">Para o que serve e quem pode utilizá-lo</small>
+                                <p class="mb-0">O GitHub é o maior repositório de dados compartilhado do mundo, com 28 milhões de usuários atualmente. É uma plataforma majoritariamente usada por desenvolvedores, pois permite uma hospedagem prática de código-fonte e arquivos em nuvem.</p>
+                            </div>
+                        </div>
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+                            <div class="eduexp p-5 pt-0 pb-0">
+                                <h5>Quais os planos para o GitHub</h5>
+                                <small class="text-brand">Os planos do GitHub</small>
+                                <p class="mb-0">A partir de 14 de abril de 2020, o GitHub anunciou que todos os principais recursos do GitHub agora são gratuitos para todos. O GitHub anunciou os seguintes planos e mudanças de preços: O GitHub Free para organizações está disponível imediatamente e inclui repositórios privados para usuários ilimitados; Todas as organizações que anteriormente usavam o Team for Open Source agora têm o GitHub Free; O GitHub Free para desenvolvedores individuais agora inclui colaboradores ilimitados; Organizações e indivíduos usando o GitHub Free receberão Suporte Comunitário do GitHub; O GitHub Pro agora incluirá 2GB de armazenamento de pacotes e 10GB de transferência de dados; O GitHub Pro agora tem um preço mensal reduzido de $4; O GitHub Team agora tem um preço mensal reduzido de $4 por usuário; O GitHub Team não tem mais um mínimo necessário de cinco lugares; O GitHub Team inclui 3.000 minutos de ações por mês para repositórios privados</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="400">
+                            <div class="eduexp p-5 pt-0">
+                                <h5>Ambientes dentro do GitHub</h5>
+                                <small class="text-brand">Como são os ambientes?</small>
+                                <p class="mb-0">Os ambientes são usados para descrever um destino de implantação geral, como production, staging ou development. Quando um fluxo de trabalho de GitHub Actions é implantado em um ambiente, o ambiente é exibido na página principal do repositório. Para obter mais informações sobre como ver implantações em ambientes, confira "Como ver o histórico de implantações". Você pode configurar ambientes com regras de proteção e segredos. Quando um trabalho de fluxo de trabalho faz referência a um ambiente, o trabalho não será iniciado até que todas as regras de proteção do ambiente sejam aprovadas. Um trabalho também não pode acessar segredos definidos em ambiente até que todas as regras de proteção do ambiente sejam aprovadas.</p>
+                            </div>
+                        </div>
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="500">
+                            <div class="eduexp p-5 pt-0">
+                                <h5>Quais são as formas de uso do GitHub</h5>
+                                <small class="text-brand">Navegador, app para windows, app para celulares</small>
+                                <p class="mb-0">O GitHub pode ser acessado e usado diretamnete de um navegador a internet, bastando apenas fazer login em uma conta para começar a usá-lo. Também é possível instalar o GitHub Desktop em sistemas operacionais compatíveis, que incluem atualmente MacOS 10.12 ou posterior e Windows 7 64-bit ou versão posterior. Em aparelhos móveis temos o GitHub Mobile que está disponível como um aplicativo Android e iOS, ele ferece uma maneira de fazer trabalhos de alto impacto no GitHub rapidamente e de qualquer lugar, sendo também uma maneira segura de acessar seus dados do GitHub por meio de um aplicativo cliente primário e confiável.</p>
+                            </div>
+                        </div>
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                            <div class="eduexp p-5 pt-0 pb-0">
+                                <h5>Versionamentos</h5>
+                                <small class="text-brand">O que é versionamento</small>
+                                <p class="mb-0">Um sistema de versionamento permite que várias pessoas trabalhem no mesmo conjunto de arquivos (repositório) ao mesmo tempo em que evita conflitos entre as alterações. Cada membro do time de desenvolvimento tem sua “cópia” dos arquivos que ao final das alterações é colocada junto das versões alteradas dos demais.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funções e Comandos -->
+    <section id="Funções e Comandos" class="section-padding section-connector">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="setion-title text-center" data-aos="fade-up" data-aos-delay="100">
+                        <h1>Funções e Comandos</h1>
+                        <p>Abaixo será apresentado um pequeno resumo sobre algumas funções presentes no GitHub e alguns de seus principais comandos para a produção eficaz de projetos dentro da plataforma.</p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-4 text-center">
+                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service py-5 px-4 border">
+                        <div class="service-icon">
+                            <i class="ri-git-repository-line"></i>
+                        </div>
+                        <h5 class="mt-4">Repositórios</h5>
+                        <p>Um repositório contém todos os arquivos do seu projeto e o histórico de revisão de cada arquivo. É usado para discutir e gerenciar o trabalho do projeto dentro do repositório.</p>
+                        <a href="https://docs.github.com/pt/get-started/quickstart/create-a-repo" class="custom-link">
+                            <span>Leia mais</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service py-5 px-4 border">
+                        <div class="service-icon">
+                            <i class="ri-git-branch-line"></i>
+                        </div>
+                        <h5 class="mt-4">Branch</h5>
+                        <p>O comando git branch permite criar, listar, renomear e excluir ramificações. Ele não permite alternar entre as ramificações ou reunir um histórico bifurcado de novo.</p>
+                        <a href="https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches" class="custom-link">
+                            <span>Leia mais</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service py-5 px-4 border">
+                        <div class="service-icon">
+                            <i class="ri-git-merge-line"></i>
+                        </div>
+                        <h5 class="mt-4"> Git Merge</h5>
+                        <p> Git merge é o comando que unifica algum histórico bifurcado. Ele permite que você pegue as linhas criadas a partir do Git branch e faça uma integração para a ramificação principal.</p>
+                        <a href="https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request" class="custom-link">
+                            <span>Leia Mais</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service py-5 px-4 border">
+                        <div class="service-icon">
+                            <i class="ri-git-commit-line"></i>
+                        </div>
+                        <h5 class="mt-4">Commits</h5>
+                        <p>Os commits são as unidades estruturais de um cronograma de projeto Git. Podem ser considerados instantâneos ou marcos ao longo do cronograma de um projeto Gite.</p>
+                        <a href="https://docs.github.com/pt/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits" class="custom-link">
+                            <span>Leia mais</span>
+                            <i class="ri-arrow-right-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Criação de Projetos -->
+    <section id="Criação de Projetos" class="section-padding section-connector">
+        <div class="container">
+            <div class="row">
+                <div class="col-12" data-aos="fade-up" data-aos-delay="100">
+                    <div class="setion-title text-center">
+                        <h1>Criação de projetos</h1>
+                        <p>Abaixo temos uma breve introdução de como criar seus primeiros projetos e criar também um pull request usando o GitHub. Basta seguir o exemplo de criação feito pela nossa equipe.</p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row gy-5">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="100">
+                            <div class="eduexp p-5 pt-0">
+                                <h5>Introdução</h5>
+                                <small class="text-brand">O que é o GitHub</small>
+                                <p class="mb-0">GitHub é uma plataforma de hospedagem de código para controle de versão e colaboração. Permite que você e outras pessoas trabalhem em conjunto em projetos de qualquer lugar. Para concluir este tutorial, você precisa ter uma conta do GitHub e acesso à Internet. Você não precisa saber como programar, usar a linha de comando ou instalar o Git (o software de controle de versão no qual GitHub é criado).Neste guia de início rápido, você irá: Criar e usar um repositório; Iniciar e gerenciar um novo branch; Fazer alterações em um arquivo e enviá-los por push para GitHub como commits; Abrir e realizar merge de um pull request</p>
+                            </div>
+                        </div>
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+                            <div class="eduexp p-5 pt-0">
+                                <h5>Criando Repositório</h5>
+                                <small class="text-brand">Criação do seu primeiro repositório</small>
+                                <p class="mb-0">Um repositório geralmente é usado para organizar um único projeto. Os repositórios podem conter pastas e arquivos, imagens, vídeos, planilhas e conjuntos de dados - tudo o que seu projeto precisar. Geralmente, os repositórios incluem um arquivo README, um arquivo com informações sobre seu projeto. Os arquivos README são escritos na linguagem Markdown em texto sem formatação. Para a criação do repositório seguiremos a seguinte ordem, no canto superior direito de qualquer página, use o menu suspenso  e selecione a opção "Novo repositório". Feito isso, na caixa "Nome do repositório", insira hello-world. Na caixa Descrição, escreva uma breve descrição.Selecione se o repositório será Público ou Privado. Clique em Criar repositório.</p>
+                            </div>
+                        </div>
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+                            <div class="eduexp p-5 pt-0 pb-0">
+                                <h5>Criando as Branches</h5>
+                                <small class="text-brand">Trabalhando com as Branches</small>
+                                <p class="mb-0">O Branch permite que você tenha diferentes versões de um repositório de uma só vez. Por padrão, seu repositório tem um branch chamado main que é considerado o branch definitivo. Você pode criar branches adicionais com base em main no repositório. Para isso clique na guia "Código do repositório hello-world". Clique na lista suspensa no início da lista de arquivos que indica principal. Digite um nome de branch, readme-edits, na caixa de texto. Clique em "Criar branch: readme-edits" com base no principal. Feito isso, você possui um novo branch em seu repositório.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="400">
+                            <div class="eduexp p-5 pt-0">
+                                <h5>Criando e fazendo commits das alterações</h5>
+                                <small class="text-brand">Trabalhando com as commits</small>
+                                <p class="mb-0">Quando você criou um branch na etapa anterior, o GitHub direcionou você para a página de código do novo branch readme-edits, que é uma cópia de main. Em GitHub, as alterações salvas são denominadas commits. Seguimos a seguinte ordem para a mudança de commits do seu arquivo. Abaixo do branch readme-edits que você criou, clique no arquivo README.md. Clique no <i class="ri-pencil-line"></i> para editar o arquivo. Clique em "Fazer commit das alterações". Essas alterações serão feitas somente no arquivo README no branch readme-edits, ou seja, agora esse branch tem um conteúdo diferente de main.</p>
+                            </div>
+                        </div>
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="500">
+                            <div class="eduexp p-5 pt-0">
+                                <h5>Abrir um pull request</h5>
+                                <small class="text-brand">Trabalhando com os pull requests</small>
+                                <p class="mb-0">Os pull requests são o centro da colaboração em GitHub. Ao abrir um pull request, você está propondo suas alterações e solicitando que alguém analise e faça pull na sua contribuição e os mescle no seu branch. Os pull requests mostram diffs, ou diferenças, do conteúdo de ambos os branches. As alterações, adições e subtrações são exibidas em cores diferentes. Assim que você fizer um commit, você poderá abrir um pull request e começar uma discussão, mesmo antes de o código ser concluído. Usando o recurso @mention do GitHub na mensagem de solicitação de pull, você pode solicitar comentários de pessoas ou equipes específicas, estejam elas no corredor ou a dez fusos horários de distância.</p>
+                            </div>
+                        </div>
+                        <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                            <div class="eduexp p-5 pt-0 pb-0">
+                                <h5>Mesclando seu pull request</h5>
+                                <small class="text-brand">Etapa final</small>
+                                <p class="mb-0">Nesta etapa final, você mesclará o branch readme-edits no branch main. Depois que você mesclar a solicitação de pull, as alterações no branch readme-edits serão incorporadas em main. Às vezes, uma solicitação de pull pode introduzir alterações no código que entram em conflito com o código existente em main. Se houver algum conflito, o GitHub irá alertar você sobre o código conflitante e impedirá a fusão até que os conflitos sejam resolvidos. Você pode criar um commit que resolve os conflitos ou usar comentários na pull request para discutir os conflitos com os integrantes da equipe.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final da Página -->
+        <footer>
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row gy-5">
+                        <div class="col-md-4">
+                            <h4><a href="#" class="text-white">Manual para o GitHub</a></h4>
+                            <p>Site feito para auxiliar no projeto da fábrica de software sobre a explicação do GitHub.</p>
+                            <ul class="navbar-nav flex-row">
+                                <li class="nav-item">
+                                    <a class="social-icon" href="https://twitter.com/github"><i class="ri-twitter-line"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="social-icon" href="https://github.com/"><i class="ri-github-line"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="social-icon" href="https://www.instagram.com/github/"><i class="ri-instagram-line"></i></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="social-icon" href="https://www.youtube.com/c/GitHub"><i class="ri-youtube-line"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3 ms-auto">
+                            <h4>Atalhos rápidos</h4>
+                            <ul>
+                                <li><a href="#home">Início</a></li>
+                                <li><a href="#Login no GitHub">Acesso</a></li>
+                                <li><a href="#conteudos principais">Geral</a></li>
+                                <li><a href="#Funções e Comandos">Funções e Comandos</a></li>
+                                <li><a href="#Criação de Projetos">Criação de Projetos</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>Créditos</h4>
+                            <ul>
+                                <li>Bootstrap 5.0</li>
+                                <li>GitHub</li>
+                                <li>Unsplash</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-auto">
+                            <p class="mb-0"><i class="ri-copyright-line"></i>Copyright (c) 2022 Vinícius Raniery</p>
+                            <p>Code licensed MIT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./docs/js/app.js"></script>
+</body>
+
+</html>
