@@ -170,7 +170,7 @@ img {
 
 /* Home */
 #home {
-    background-image: url(../images/clouds.jpg);
+    background-image: url(#);
     background-position: center;
     background-size: cover;
 }
