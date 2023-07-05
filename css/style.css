@@ -262,7 +262,7 @@ img {
   color:var(--c-light);
 }
 
-.accordion-container .accordion.active .accordion-heading i{
+.accordion-container .accordion.active .accordion-heading ion-icon{
   color:var(--c-light);
   transform: rotate(180deg);
   transition: transform .2s .1s;
