@@ -31,9 +31,19 @@ for (i = 0; i < len; i++) {
 
 let accordions = document.querySelectorAll('.accordion-container .accordion');
 
-accordions.forEach(acco =>{
-    acco.onclick = () =>{
-        accordions.forEach(subAcco => { subAcco.classList.remove('active') });
-        acco.classList.add('active');
+accordions.forEach((acco, index) => {
+  acco.onclick = () => {
+    const isActive = acco.classList.contains('active');
+
+    accordions.forEach(subAcco => {
+      subAcco.classList.remove('active');
+    });
+
+    if (!isActive) {
+      acco.classList.add('active');
     }
-})
+  };
+
+  // Feche todas as FAQs ao iniciar o site
+  acco.classList.remove('active');
+});
