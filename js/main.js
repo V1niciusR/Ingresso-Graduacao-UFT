@@ -12,7 +12,7 @@ AOS.init({
 });
 
 
-
+/*
 var acc = document.getElementsByClassName("accordion");
 var i;
 var len = acc.length;
@@ -27,3 +27,13 @@ for (i = 0; i < len; i++) {
     }
   });
 }
+*/
+
+let accordions = document.querySelectorAll('.accordion-container .accordion');
+
+accordions.forEach(acco =>{
+    acco.onclick = () =>{
+        accordions.forEach(subAcco => { subAcco.classList.remove('active') });
+        acco.classList.add('active');
+    }
+})
