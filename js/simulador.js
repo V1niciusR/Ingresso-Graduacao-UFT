@@ -20,120 +20,120 @@ function checkModalidades(answers) {
 
   /*=====Todos sim=====*/
   if (q1 === "Sim") {
-      if (q2 === "Sim") {
-          if (q3 === "Sim") {
-              if (q4 === "Sim") {
-                  modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-                  modalidadesPossiveis.push("L1 - Escola pública e renda inferior");
-                  modalidadesPossiveis.push("L2 - Escola pública, renda inferior e autodeclarado preto, pardo ou indígena");
-                  modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
-                  modalidadesPossiveis.push("L4/L6 - Escola pública, renda não considerada e preto, pardo ou indígena");
-                  modalidadesPossiveis.push("L9 - Escola pública, renda inferior e pessoa com deficiência");
-                  modalidadesPossiveis.push("L13 - Escola pública e pessoa com deficiência");
-                  modalidadesPossiveis.push("L14 - Escola pública, renda não considerada, preto, pardo ou indígena e pessoa com deficiência");
-              } 
-              
-              /*=====S, S, S, N=====*/
-              else {
-                  modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-                  modalidadesPossiveis.push("L1 - Escola pública e renda inferior");
-                  modalidadesPossiveis.push("L2 - Escola pública, renda inferior e autodeclarado preto, pardo ou indígena");
-                  modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
-                  modalidadesPossiveis.push("L4/L6 - Escola pública, renda não considerada e preto, pardo ou indígena");
-              }
-          } 
-          
-          /*=====S, S, N, S=====*/
-          else {
-              modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-              modalidadesPossiveis.push("L1 - Escola pública e renda inferior");
-              modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
-              modalidadesPossiveis.push("L9 - Escola pública, renda inferior e pessoa com deficiência");
-              modalidadesPossiveis.push("L13 - Escola pública e pessoa com deficiência");
-          }
-      } 
-      
-      /*=====S, N, S, S=====*/
-      else {
-          if (q3 === "Sim") {
-              if (q4 === "Sim") {
-                  modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-                  modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
-                  modalidadesPossiveis.push("L4/L6 - Escola pública, renda não considerada e preto, pardo ou indígena");
-                  modalidadesPossiveis.push("L13 - Escola pública e pessoa com deficiência");
-                  modalidadesPossiveis.push("L14 - Escola pública, renda não considerada, preto, pardo ou indígena e pessoa com deficiência");
-              } 
-              
-              /*=====S, N, S, N=====*/
-              else {
-                  modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-                  modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
-                  modalidadesPossiveis.push("L4/L6 - Escola pública, renda não considerada e preto, pardo ou indígena");
-              }
-          } 
-          
-          /*=====S, N, N, S=====*/
-          else {
-              if (q4 === "Sim") {
-                  modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-                  modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
-                  modalidadesPossiveis.push("L13 - Escola pública e pessoa com deficiência");
-              } 
-              
-              /*=====S, N, N, N=====*/
-              else {
-                  modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-                  modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
-              }
-          }
+    if (q2 === "Sim") {
+      if (q3 === "Sim") {
+        if (q4 === "Sim") {
+          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
+          modalidadesPossiveis.push("L1 - Escola pública e renda inferior");
+          modalidadesPossiveis.push("L2 - Escola pública, renda inferior e autodeclarado preto, pardo ou indígena");
+          modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
+          modalidadesPossiveis.push("L4/L6 - Escola pública, renda não considerada e preto, pardo ou indígena");
+          modalidadesPossiveis.push("L9 - Escola pública, renda inferior e pessoa com deficiência");
+          modalidadesPossiveis.push("L13 - Escola pública e pessoa com deficiência");
+          modalidadesPossiveis.push("L14 - Escola pública, renda não considerada, preto, pardo ou indígena e pessoa com deficiência");
+        }
+
+        /*=====S, S, S, N=====*/
+        else {
+          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
+          modalidadesPossiveis.push("L1 - Escola pública e renda inferior");
+          modalidadesPossiveis.push("L2 - Escola pública, renda inferior e autodeclarado preto, pardo ou indígena");
+          modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
+          modalidadesPossiveis.push("L4/L6 - Escola pública, renda não considerada e preto, pardo ou indígena");
+        }
       }
-  } 
-  
+
+      /*=====S, S, N, S=====*/
+      else {
+        modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
+        modalidadesPossiveis.push("L1 - Escola pública e renda inferior");
+        modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
+        modalidadesPossiveis.push("L9 - Escola pública, renda inferior e pessoa com deficiência");
+        modalidadesPossiveis.push("L13 - Escola pública e pessoa com deficiência");
+      }
+    }
+
+    /*=====S, N, S, S=====*/
+    else {
+      if (q3 === "Sim") {
+        if (q4 === "Sim") {
+          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
+          modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
+          modalidadesPossiveis.push("L4/L6 - Escola pública, renda não considerada e preto, pardo ou indígena");
+          modalidadesPossiveis.push("L13 - Escola pública e pessoa com deficiência");
+          modalidadesPossiveis.push("L14 - Escola pública, renda não considerada, preto, pardo ou indígena e pessoa com deficiência");
+        }
+
+        /*=====S, N, S, N=====*/
+        else {
+          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
+          modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
+          modalidadesPossiveis.push("L4/L6 - Escola pública, renda não considerada e preto, pardo ou indígena");
+        }
+      }
+
+      /*=====S, N, N, S=====*/
+      else {
+        if (q4 === "Sim") {
+          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
+          modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
+          modalidadesPossiveis.push("L13 - Escola pública e pessoa com deficiência");
+        }
+
+        /*=====S, N, N, N=====*/
+        else {
+          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
+          modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
+        }
+      }
+    }
+  }
+
   /*=====N, S, S, S=====*/
   else {
-      if (q2 === "Sim") {
-          if (q3 === "Sim") {
-              if (q4 === "Sim") {
-                  modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-              } 
-              
-              /*=====N, S, S, N=====*/
-              else {
-                  modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-              }
-          } 
-          
-          /*=====N, S, N, S=====*/
-          else {
-              modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-          }
-      } 
-      
-      /*=====N, N, S, S=====*/
-      else {
-          if (q3 === "Sim") {
-              if (q4 === "Sim") {
-                  modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-              } 
-              
-              /*=====N, N, S, N=====*/
-              else {
-                  modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-              }
-          } 
-          
-          /*=====N, N, N, S=====*/
-          else {
-              if (q4 === "Sim") {
-                  modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-              } 
-              
-              /*=====N, N, N, N=====*/
-              else {
-                  modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-              }
-          }
+    if (q2 === "Sim") {
+      if (q3 === "Sim") {
+        if (q4 === "Sim") {
+          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
+        }
+
+        /*=====N, S, S, N=====*/
+        else {
+          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
+        }
       }
+
+      /*=====N, S, N, S=====*/
+      else {
+        modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
+      }
+    }
+
+    /*=====N, N, S, S=====*/
+    else {
+      if (q3 === "Sim") {
+        if (q4 === "Sim") {
+          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
+        }
+
+        /*=====N, N, S, N=====*/
+        else {
+          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
+        }
+      }
+
+      /*=====N, N, N, S=====*/
+      else {
+        if (q4 === "Sim") {
+          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
+        }
+
+        /*=====N, N, N, N=====*/
+        else {
+          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
+        }
+      }
+    }
   }
 
   return modalidadesPossiveis;
