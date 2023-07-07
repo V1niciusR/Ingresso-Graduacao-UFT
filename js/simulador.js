@@ -1,16 +1,21 @@
-document.getElementById("simulatorForm").addEventListener("submit", function (event) {
+document.getElementById("simulatorForm").addEventListener("submit", function(event) {
   event.preventDefault();
 
-  const question1 = document.getElementById("question1").value;
-  const question2 = document.getElementById("question2").value;
-  const question3 = document.getElementById("question3").value;
-  const question4 = document.getElementById("question4").value;
+  const question1 = document.querySelector('input[name="question1"]:checked').value;
+  const question2 = document.querySelector('input[name="question2"]:checked').value;
+  const question3 = document.querySelector('input[name="question3"]:checked').value;
+  const question4 = document.querySelector('input[name="question4"]:checked').value;
 
   const answers = [question1, question2, question3, question4];
 
   const modalidades = checkModalidades(answers);
 
   document.getElementById("result").innerHTML = "<h4>Você pode concorrer à vaga nas seguintes cotas:</h4><ul>" + modalidades.map(modalidade => "<li>" + modalidade + "</li>").join("") + "</ul>";
+});
+
+document.getElementById("resetButton").addEventListener("click", function() {
+  document.getElementById("simulatorForm").reset();
+  document.getElementById("result").innerHTML = "";
 });
 
 function checkModalidades(answers) {

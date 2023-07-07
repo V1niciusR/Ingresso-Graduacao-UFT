@@ -98,7 +98,7 @@
     </section>
 
 
-
+<!--
     <section id="Simulador" class="section-padding section-connector">
         <div class="container">
             <div class="row">
@@ -159,6 +159,104 @@
                             link.</small>
                     </div>
                     <button type="submit" class="btn btn-primary">Verificar Modalidades</button>
+                </form>
+                <div id="result" class="mt-4" style="padding: 10px;"></div>
+            </div>
+        </div>
+    </section>
+-->
+
+
+
+    <section id="Simulador" class="section-padding section-connector">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="setion-title text-center">
+                        <h1>Simulador</h1>
+                        <p>Utilize nosso Simulador de Cotas e descubra as oportunidades que estão disponíveis para você!
+                            Estamos aqui para ajudá-lo(a) a entender melhor as cotas e tornar seu processo de
+                            candidatura mais claro e transparente. Desejamos sucesso em sua jornada e que você possa
+                            aproveitar todas as oportunidades que estiverem ao seu alcance.</p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mt-5">
+                <h1 class="text-center">Descubra as modalidades de cotas</h1>
+                <form id="simulatorForm">
+                    <div class="card mb-4">
+                        <div class="card-body p-3">
+                            <h5 class="card-title">Estudou em escola pública todos os três anos do Ensino Médio?</h5>
+                            <div class="form-group">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-outline-primary">
+                                        <input type="radio" name="question1" id="question1_sim" value="Sim"> Sim
+                                    </label>
+                                    <label class="btn btn-outline-primary">
+                                        <input type="radio" name="question1" id="question1_nao" value="Não"> Não
+                                    </label>
+                                </div>
+                            </div>
+                            <small>*Para concorrer a esta ação afirmativa é necessário que todo o Ensino Médio tenha sido
+                                feito em Escola Pública. Candidato que tenha cursado uma disciplina isolada em escola
+                                privada ou que tenha sido bolsista, mesmo que integral, de escola privada não pode marcar
+                                esta opção. Saiba mais na pergunta específica aqui no Portal!</small>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body p-3">
+                            <h5 class="card-title">Renda per capita menor ou igual a 1,5 salário mínimo?</h5>
+                            <div class="form-group">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-outline-primary">
+                                        <input type="radio" name="question2" id="question2_sim" value="Sim"> Sim
+                                    </label>
+                                    <label class="btn btn-outline-primary">
+                                        <input type="radio" name="question2" id="question2_nao" value="Não"> Não
+                                    </label>
+                                </div>
+                            </div>
+                            <small>*O cálculo deve ser da renda bruta somada de todos os membros do grupo familiar. Saiba o
+                                valor exato na pergunta específica no Portal!</small>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body p-3">
+                            <h5 class="card-title">Você é autodeclarado preto, pardo ou indígena?</h5>
+                            <div class="form-group">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-outline-primary">
+                                        <input type="radio" name="question3" id="question3_sim" value="Sim"> Sim
+                                    </label>
+                                    <label class="btn btn-outline-primary">
+                                        <input type="radio" name="question3" id="question3_nao" value="Não"> Não
+                                    </label>
+                                </div>
+                            </div>
+                            <small>*Informe-se sobre a autodeclaração étnico-racial na pergunta aqui no site e veja como é
+                                feita a verificação dessa condição: neste item.</small>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-body p-3">
+                            <h5 class="card-title">Você é pessoa com deficiência?</h5>
+                            <div class="form-group">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-outline-primary">
+                                        <input type="radio" name="question4" id="question4_sim" value="Sim"> Sim
+                                    </label>
+                                    <label class="btn btn-outline-primary">
+                                        <input type="radio" name="question4" id="question4_nao" value="Não"> Não
+                                    </label>
+                                </div>
+                            </div>
+                            <small>*Veja quem pode concorrer às vagas destinadas às pessoas com deficiência: neste
+                                link.</small>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Verificar Modalidades</button>
+                    <button type="button" id="resetButton" class="btn btn-secondary">Reiniciar Simulador</button>
                 </form>
                 <div id="result" class="mt-4" style="padding: 10px;"></div>
             </div>
