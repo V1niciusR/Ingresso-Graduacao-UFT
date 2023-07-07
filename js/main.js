@@ -1,15 +1,36 @@
 window.onscroll = function () {
-    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-        document.getElementById('navbar').classList.add('scrolled');
-    } else {
-        document.getElementById('navbar').classList.remove('scrolled');
-    }
+  showButton();
+  addScrolledClass();
+};
+
+function showButton() {
+  var button = document.querySelector('.scroll-up-btn');
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+    button.classList.add('show');
+  } else {
+    button.classList.remove('show');
+  }
 }
 
-// AOS
-AOS.init({
-    duration: 800,
+function addScrolledClass() {
+  var navbar = document.getElementById('navbar');
+  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+}
+
+// Função para animação de rolagem suave para o topo
+document.querySelector('.scroll-up-btn').addEventListener('click', function () {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 });
+
+AOS.init({
+  duration: 800,
+});
+
 
 
 
