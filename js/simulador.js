@@ -143,3 +143,6 @@ function checkModalidades(answers) {
 
   return modalidadesPossiveis;
 }
+
+
+
