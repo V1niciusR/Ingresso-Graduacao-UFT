@@ -50,6 +50,11 @@ img {
     width: 100%;
 }
 
+.keyword {
+  color: blue;
+  font-weight: bold;
+}
+
 .section-padding {
     padding-top: 120px;
     padding-bottom: 120px;
