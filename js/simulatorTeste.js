@@ -155,4 +155,3 @@ document.getElementById("simulatorForm").addEventListener("submit", function(eve
   
     return modalidadesPossiveis;
   }
-  
