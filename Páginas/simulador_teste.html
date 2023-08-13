@@ -5,84 +5,123 @@
 </head>
 <body>
     <h1>Simulador de Resultados</h1>
-
-    <label>1. Você é Indígena ou Quilombola?</label><br>
-    <input type="radio" name="etnia" id="etnia_nao" checked>Não
-    <input type="radio" name="etnia" id="etnia_indigena">Indígena
-    <input type="radio" name="etnia" id="etnia_quilombola">Quilombola<br><br>
-
-    <label>2. Estudou em escola pública todos os três anos do Ensino Médio?</label><br>
-    <input type="radio" name="escola" id="escola_sim">SIM
-    <input type="radio" name="escola" id="escola_nao" checked>NÃO<br><br>
-
-    <div id="renda_div" style="display: none;">
-        <label>3. Renda per capita menor ou igual a 1,5 salário mínimo?</label><br>
-        <input type="radio" name="renda" id="renda_sim">SIM
-        <input type="radio" name="renda" id="renda_nao">NÃO<br><br>
-    </div>
-
-    <div id="autodeclarado_div" style="display: none;">
-        <label>4. Você é autodeclarado preto, pardo ou indígena?</label><br>
-        <input type="radio" name="autodeclarado" id="autodeclarado_sim">SIM
-        <input type="radio" name="autodeclarado" id="autodeclarado_nao">NÃO<br><br>
-    </div>
-
-    <div id="deficiencia_div" style="display: none;">
-        <label>5. Você é pessoa com deficiência?</label><br>
-        <input type="radio" name="deficiencia" id="deficiencia_sim">SIM
-        <input type="radio" name="deficiencia" id="deficiencia_nao">NÃO<br><br>
-    </div>
-
-    <button id="calcular">Calcular Resultado</button>
-
+    <form id="simulatorForm">
+        <p>Você é Indígena ou Quilombola?</p>
+        <label>
+            <input type="radio" name="etnia" value="nao" checked> Não
+        </label>
+        <label>
+            <input type="radio" name="etnia" value="indigena"> Indígena
+        </label>
+        <label>
+            <input type="radio" name="etnia" value="quilombola"> Quilombola
+        </label>
+        <br>
+        <p>Estudou em escola pública todos os três anos do Ensino Médio?</p>
+        <label>
+            <input type="radio" name="escola_publica" value="sim" onclick="habilitarOpcoesRenda()"> SIM
+        </label>
+        <label>
+            <input type="radio" name="escola_publica" value="nao" onclick="desabilitarOpcoesRenda()" checked> NÃO
+        </label>
+        <br>
+        <div id="opcoesRenda" style="display: none;">
+            <p>Renda per capita menor ou igual a 1,5 salário mínimo?</p>
+            <label>
+                <input type="radio" name="renda" value="sim"> SIM
+            </label>
+            <label>
+                <input type="radio" name="renda" value="nao" checked> NÃO
+            </label>
+            <br>
+            <p>Você é autodeclarado preto, pardo ou indígena?</p>
+            <label>
+                <input type="radio" name="etnia_declarada" value="sim"> SIM
+            </label>
+            <label>
+                <input type="radio" name="etnia_declarada" value="nao" checked> NÃO
+            </label>
+            <br>
+            <p>Você é pessoa com deficiência?</p>
+            <label>
+                <input type="radio" name="deficiencia" value="sim"> SIM
+            </label>
+            <label>
+                <input type="radio" name="deficiencia" value="nao" checked> NÃO
+            </label>
+        </div>
+        <br>
+        <button type="button" onclick="calcularResultado()">Calcular</button>
+    </form>
     <h2>Resultado:</h2>
     <p id="resultado"></p>
 
     <script>
-        document.getElementById("calcular").addEventListener("click", function () {
-            const etnia = document.querySelector('input[name="etnia"]:checked').id;
-            const escola = document.querySelector('input[name="escola"]:checked').id;
+        function habilitarOpcoesRenda() {
+            const opcoesRenda = document.getElementById('opcoesRenda');
+            opcoesRenda.style.display = 'block';
+        }
 
-            const renda_div = document.getElementById("renda_div");
-            const autodeclarado_div = document.getElementById("autodeclarado_div");
-            const deficiencia_div = document.getElementById("deficiencia_div");
+        function desabilitarOpcoesRenda() {
+            const opcoesRenda = document.getElementById('opcoesRenda');
+            opcoesRenda.style.display = 'none';
+        }
 
-            renda_div.style.display = "none";
-            autodeclarado_div.style.display = "none";
-            deficiencia_div.style.display = "none";
+        function calcularResultado() {
+            const form = document.getElementById('simulatorForm');
+            const etnia = form.elements['etnia'].value;
+            const escolaPublica = form.elements['escola_publica'].value;
+            const renda = form.elements['renda'].value;
+            const etniaDeclarada = form.elements['etnia_declarada'].value;
+            const deficiencia = form.elements['deficiencia'].value;
 
-            if (escola === "escola_nao" && etnia === "etnia_nao") {
-                const options = ["AC", "AC+A1", "AC+A2"];
-                const resultado = options[Math.floor(Math.random() * options.length)];
-                document.getElementById("resultado").textContent = resultado;
-            } else if (escola === "escola_sim") {
-                renda_div.style.display = "block";
-                document.getElementById("renda_sim").addEventListener("click", function () {
-                    autodeclarado_div.style.display = "block";
-                    document.getElementById("autodeclarado_sim").addEventListener("click", function () {
-                        deficiencia_div.style.display = "block";
-                        document.getElementById("deficiencia_sim").addEventListener("click", function () {
-                            document.getElementById("resultado").textContent = "AC\nL1, L5";
-                        });
-                        document.getElementById("deficiencia_nao").addEventListener("click", function () {
-                            document.getElementById("resultado").textContent = "AC\nL5";
-                        });
-                    });
-                    document.getElementById("autodeclarado_nao").addEventListener("click", function () {
-                        deficiencia_div.style.display = "block";
-                        document.getElementById("deficiencia_sim").addEventListener("click", function () {
-                            document.getElementById("resultado").textContent = "AC\nL1, L2, L5, L6";
-                        });
-                        document.getElementById("deficiencia_nao").addEventListener("click", function () {
-                            document.getElementById("resultado").textContent = "AC\nL5, L6";
-                        });
-                    });
-                });
-                document.getElementById("renda_nao").addEventListener("click", function () {
-                    document.getElementById("resultado").textContent = "AC";
-                });
+            let resultado = "AC";
+
+            if (etnia === 'indigena') {
+                resultado += "-A1-Indígena";
             }
-        });
+
+            if (escolaPublica === 'nao') {
+                resultado = "AC";
+
+                if (renda === 'sim') {
+                    resultado += "+A2";
+                } else {
+                    resultado += "+A1";
+                }
+            } else {
+                const opcoesRenda = document.getElementById('opcoesRenda');
+                opcoesRenda.style.display = 'block';
+
+                if (renda === 'sim') {
+                    resultado += ", L1";
+
+                    if (etniaDeclarada === 'sim') {
+                        resultado += ", L5";
+                    }
+
+                    if (deficiencia === 'sim') {
+                        resultado += ", L6";
+                    }
+
+                    resultado += ", L9, L13";
+
+                    if (etniaDeclarada === 'sim') {
+                        resultado += ", L2, L10, L14";
+                    }
+                } else {
+                    if (etniaDeclarada === 'sim') {
+                        resultado += ", L5";
+                    }
+
+                    if (deficiencia === 'sim') {
+                        resultado += ", L6";
+                    }
+                }
+            }
+
+            document.getElementById('resultado').textContent = resultado;
+        }
     </script>
 </body>
 </html>
