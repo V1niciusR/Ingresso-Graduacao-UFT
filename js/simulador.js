@@ -1,5 +1,129 @@
-document.getElementById("simulatorForm").addEventListener("submit", function(event) {
-  event.preventDefault();
+function handleEscolaPublicaChange(isPublica) {
+  const opcoesRenda = document.getElementById("opcoesRenda");
+  const etniaDeclarada = document.getElementById("etnia_declarada");
+  const deficiencia = document.getElementById("deficiencia");
+
+  const radioInputs = [opcoesRenda, etniaDeclarada, deficiencia].flatMap(container => container.querySelectorAll('input[type="radio"]'));
+
+  if (isPublica) {
+      radioInputs.forEach(input => {
+          if (input.value === "sim") {
+              input.checked = true;
+          } else {
+              input.checked = false;
+          }
+      });
+      opcoesRenda.style.display = "block";
+      etniaDeclarada.style.display = "block";
+      deficiencia.style.display = "block";
+  } else {
+      radioInputs.forEach(input => input.checked = false);
+      opcoesRenda.style.display = "none";
+      etniaDeclarada.style.display = "none";
+      deficiencia.style.display = "none";
+  }
+}
+
+function calcularResultado() {
+  const etnia = document.querySelector('input[name="etnia"]:checked').value;
+  const escolaPublica = document.querySelector('input[name="escola_publica"]:checked').value;
+  const renda = document.querySelector('input[name="renda"]:checked').value;
+  const etniaDeclarada = document.querySelector('input[name="etnia_declarada"]:checked').value;
+  const deficiencia = document.querySelector('input[name="deficiencia"]:checked').value;
+
+  const answers = [etnia, escolaPublica, renda, etniaDeclarada, deficiencia];
+
+  const modalidades = checkModalidades(answers);
+
+  document.getElementById("resultado").innerHTML = "<h4>Você pode concorrer à vaga nas seguintes cotas:</h4><ul>" + modalidades.map(modalidade => "<li>" + modalidade + "</li>").join("") + "</ul>";
+}
+
+function checkModalidades(answers) {
+  const modalidadesPossiveis = [];
+
+  const [etnia, escolaPublica, renda, etniaDeclarada, deficiencia] = answers;
+
+  if (etnia === "nao" && escolaPublica === "nao") {
+      modalidadesPossiveis.push("AC");
+  }
+
+  else if (etnia === "indigena" && escolaPublica === "nao") {
+      modalidadesPossiveis.push("AC");
+      modalidadesPossiveis.push("A1 - Indígena");
+  }
+
+  else if (etnia === "nao" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "nao" && deficiencia === "nao") {
+      modalidadesPossiveis.push("AC");
+      modalidadesPossiveis.push("L1");
+      modalidadesPossiveis.push("L5");
+  }
+
+  else if (etnia === "nao" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "sim" && deficiencia === "nao") {
+      modalidadesPossiveis.push("AC");
+      modalidadesPossiveis.push("L1");
+      modalidadesPossiveis.push("L2");
+      modalidadesPossiveis.push("L5");
+      modalidadesPossiveis.push("L6");
+  }
+
+  else if (etnia === "nao" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "sim" && deficiencia === "nao") {
+      modalidadesPossiveis.push("AC");
+      modalidadesPossiveis.push("L5");
+      modalidadesPossiveis.push("L6");
+  }
+
+  else if (etnia === "nao" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "sim" && deficiencia === "nao") {
+      modalidadesPossiveis.push("AC");
+      modalidadesPossiveis.push("L5");
+      modalidadesPossiveis.push("L6");
+  }
+
+  else if (etnia === "nao" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "nao" && deficiencia === "nao") {
+      modalidadesPossiveis.push("AC");
+      modalidadesPossiveis.push("L5");
+  }
+
+  else if (etnia === "nao" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "nao" && deficiencia === "sim") {
+      modalidadesPossiveis.push("AC");
+      modalidadesPossiveis.push("L1");
+      modalidadesPossiveis.push("L5");
+      modalidadesPossiveis.push("L9");
+      modalidadesPossiveis.push("L13");
+  }
+
+  else if (etnia === "nao" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "sim" && deficiencia === "sim") {
+      modalidadesPossiveis.push("AC");
+      modalidadesPossiveis.push("L1");
+      modalidadesPossiveis.push("L2");
+      modalidadesPossiveis.push("L5");
+      modalidadesPossiveis.push("L6");
+      modalidadesPossiveis.push("L9");
+      modalidadesPossiveis.push("L10");
+      modalidadesPossiveis.push("L13");
+      modalidadesPossiveis.push("L14");
+  }
+
+  else if (etnia === "nao" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "sim" && deficiencia === "sim") {
+      modalidadesPossiveis.push("AC");
+      modalidadesPossiveis.push("L5");
+      modalidadesPossiveis.push("L6");
+      modalidadesPossiveis.push("L13");
+      modalidadesPossiveis.push("L14");
+  }
+
+  else if (etnia === "nao" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "nao" && deficiencia === "sim") {
+      modalidadesPossiveis.push("AC");
+      modalidadesPossiveis.push("L5");
+      modalidadesPossiveis.push("L13");
+  }
+
+  return modalidadesPossiveis;
+}
+
+
+
+document.getElementById("simulatorForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Impede o envio padrão do formulário.
 
   const question1 = document.querySelector('input[name="question1"]:checked').value;
   const question2 = document.querySelector('input[name="question2"]:checked').value;
@@ -10,137 +134,18 @@ document.getElementById("simulatorForm").addEventListener("submit", function(eve
 
   const modalidades = checkModalidades(answers);
 
-  document.getElementById("result").innerHTML = "<h4>Você pode concorrer à vaga nas seguintes cotas:</h4><ul>" + modalidades.map(modalidade => "<li>" + modalidade + "</li>").join("") + "</ul>";
+  document.getElementById("resultado").innerHTML =
+    "<h4>Você pode concorrer à vaga nas seguintes cotas:</h4><ul>" +
+    modalidades.map(modalidade => "<li>" + modalidade + "</li>").join("") +
+    "</ul>";
 });
 
-document.getElementById("resetButton").addEventListener("click", function() {
+document.getElementById("resetButton").addEventListener("click", function () {
   document.getElementById("simulatorForm").reset();
-  document.getElementById("result").innerHTML = "";
+  document.getElementById("resultado").innerHTML = "";
 });
 
-function checkModalidades(answers) {
-  const modalidadesPossiveis = [];
 
-  const [q1, q2, q3, q4] = answers;
 
-  /*=====Todos sim=====*/
-  if (q1 === "Sim") {
-    if (q2 === "Sim") {
-      if (q3 === "Sim") {
-        if (q4 === "Sim") {
-          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-          modalidadesPossiveis.push("L1 - Escola pública e renda inferior");
-          modalidadesPossiveis.push("L2 - Escola pública, renda inferior e autodeclarado preto, pardo ou indígena");
-          modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
-          modalidadesPossiveis.push("L4/L6 - Escola pública, renda não considerada e preto, pardo ou indígena");
-          modalidadesPossiveis.push("L9 - Escola pública, renda inferior e pessoa com deficiência");
-          modalidadesPossiveis.push("L13 - Escola pública e pessoa com deficiência");
-          modalidadesPossiveis.push("L14 - Escola pública, renda não considerada, preto, pardo ou indígena e pessoa com deficiência");
-        }
 
-        /*=====S, S, S, N=====*/
-        else {
-          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-          modalidadesPossiveis.push("L1 - Escola pública e renda inferior");
-          modalidadesPossiveis.push("L2 - Escola pública, renda inferior e autodeclarado preto, pardo ou indígena");
-          modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
-          modalidadesPossiveis.push("L4/L6 - Escola pública, renda não considerada e preto, pardo ou indígena");
-        }
-      }
-
-      /*=====S, S, N, S=====*/
-      else {
-        modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-        modalidadesPossiveis.push("L1 - Escola pública e renda inferior");
-        modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
-        modalidadesPossiveis.push("L9 - Escola pública, renda inferior e pessoa com deficiência");
-        modalidadesPossiveis.push("L13 - Escola pública e pessoa com deficiência");
-      }
-    }
-
-    /*=====S, N, S, S=====*/
-    else {
-      if (q3 === "Sim") {
-        if (q4 === "Sim") {
-          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-          modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
-          modalidadesPossiveis.push("L4/L6 - Escola pública, renda não considerada e preto, pardo ou indígena");
-          modalidadesPossiveis.push("L13 - Escola pública e pessoa com deficiência");
-          modalidadesPossiveis.push("L14 - Escola pública, renda não considerada, preto, pardo ou indígena e pessoa com deficiência");
-        }
-
-        /*=====S, N, S, N=====*/
-        else {
-          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-          modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
-          modalidadesPossiveis.push("L4/L6 - Escola pública, renda não considerada e preto, pardo ou indígena");
-        }
-      }
-
-      /*=====S, N, N, S=====*/
-      else {
-        if (q4 === "Sim") {
-          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-          modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
-          modalidadesPossiveis.push("L13 - Escola pública e pessoa com deficiência");
-        }
-
-        /*=====S, N, N, N=====*/
-        else {
-          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-          modalidadesPossiveis.push("L3/L5 - Escola pública e renda não considerada");
-        }
-      }
-    }
-  }
-
-  /*=====N, S, S, S=====*/
-  else {
-    if (q2 === "Sim") {
-      if (q3 === "Sim") {
-        if (q4 === "Sim") {
-          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-        }
-
-        /*=====N, S, S, N=====*/
-        else {
-          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-        }
-      }
-
-      /*=====N, S, N, S=====*/
-      else {
-        modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-      }
-    }
-
-    /*=====N, N, S, S=====*/
-    else {
-      if (q3 === "Sim") {
-        if (q4 === "Sim") {
-          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-        }
-
-        /*=====N, N, S, N=====*/
-        else {
-          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-        }
-      }
-
-      /*=====N, N, N, S=====*/
-      else {
-        if (q4 === "Sim") {
-          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-        }
-
-        /*=====N, N, N, N=====*/
-        else {
-          modalidadesPossiveis.push("A0 - Acesso universal / Ampla concorrência");
-        }
-      }
-    }
-  }
-
-  return modalidadesPossiveis;
-}
 
