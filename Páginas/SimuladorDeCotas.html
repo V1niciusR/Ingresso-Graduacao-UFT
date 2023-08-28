@@ -224,6 +224,13 @@
                         const etnia = document.querySelector('input[name="etnia"]:checked').value;
                         const escolaPublica = document.querySelector('input[name="escola_publica"]:checked').value;
 
+                        if (escolaPublica === "sim") {
+                            if (!validateSubQuestions()) {
+                                document.getElementById("resultado").innerHTML = "<p style='color: red;'>Por favor, responda todas as perguntas após marcar 'SIM' na pergunta sobre escola pública.</p>";
+                                return;
+                            }
+                        }
+
                         let renda = null;
                         let etniaDeclarada = null;
                         let deficiencia = null;
@@ -245,6 +252,14 @@
                         const modalidades = checkModalidades(answers);
 
                         document.getElementById("resultado").innerHTML = "<h4>Você pode concorrer à vaga nas seguintes cotas:</h4><ul>" + modalidades.map(modalidade => "<li>" + modalidade + "</li>").join("") + "</ul>";
+                    }
+
+                    function validateSubQuestions() {
+                        const rendaChecked = document.querySelector('input[name="renda"]:checked');
+                        const etniaDeclaradaChecked = document.querySelector('input[name="etnia_declarada"]:checked');
+                        const deficienciaChecked = document.querySelector('input[name="deficiencia"]:checked');
+
+                        return rendaChecked && etniaDeclaradaChecked && deficienciaChecked;
                     }
 
                     function checkModalidades(answers) {
@@ -325,6 +340,8 @@
                             modalidadesPossiveis.push("L5");
                             modalidadesPossiveis.push("L13");
                         }
+
+
 
                         return modalidadesPossiveis;
                     }
