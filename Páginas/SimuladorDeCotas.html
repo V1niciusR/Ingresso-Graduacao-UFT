@@ -138,12 +138,12 @@
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="escola_publica" value="sim"
                                 id="escolaPublicaSim" onclick="handleEscolaPublicaChange(true)">
-                            <label class="form-check-label">SIM</label>
+                            <label class="form-check-label">Sim</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="escola_publica" value="nao"
                                 id="escolaPublicaNao" onclick="handleEscolaPublicaChange(false)">
-                            <label class="form-check-label">NÃO</label>
+                            <label class="form-check-label">Não</label>
                         </div>
                     </div>
 
@@ -151,11 +151,11 @@
                         <label>Renda per capita menor ou igual a 1,5 salário mínimo?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="renda" value="sim">
-                            <label class="form-check-label">SIM</label>
+                            <label class="form-check-label">Sim</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="renda" value="nao">
-                            <label class="form-check-label">NÃO</label>
+                            <label class="form-check-label">Não</label>
                         </div>
                     </div>
 
@@ -163,11 +163,11 @@
                         <label>Você é autodeclarado preto, pardo ou indígena?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="etnia_declarada" value="sim">
-                            <label class="form-check-label">SIM</label>
+                            <label class="form-check-label">Sim</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="etnia_declarada" value="nao">
-                            <label class="form-check-label">NÃO</label>
+                            <label class="form-check-label">Não</label>
                         </div>
                     </div>
 
@@ -175,11 +175,11 @@
                         <label>Você é pessoa com deficiência?</label>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="deficiencia" value="sim">
-                            <label class="form-check-label">SIM</label>
+                            <label class="form-check-label">Sim</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="deficiencia" value="nao">
-                            <label class="form-check-label">NÃO</label>
+                            <label class="form-check-label">Não</label>
                         </div>
                     </div>
 
@@ -343,6 +343,159 @@
 
 
 
+
+
+
+
+                        else if (etnia === "indigena" && escolaPublica === "nao") {
+                            modalidadesPossiveis.push("AC");
+                            modalidadesPossiveis.push("A1 - Indígena");
+                        }
+
+                        else if (etnia === "indigena" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "nao" && deficiencia === "nao") {
+                            modalidadesPossiveis.push("A1");
+                            modalidadesPossiveis.push("L1");
+                            modalidadesPossiveis.push("L5");
+                        }
+
+                        else if (etnia === "indigena" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "sim" && deficiencia === "nao") {
+                            modalidadesPossiveis.push("A1");
+                            modalidadesPossiveis.push("L1");
+                            modalidadesPossiveis.push("L2");
+                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("L6");
+                        }
+
+                        else if (etnia === "indigena" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "sim" && deficiencia === "nao") {
+                            modalidadesPossiveis.push("A1");
+                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("L6");
+                        }
+
+                        else if (etnia === "indigena" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "sim" && deficiencia === "nao") {
+                            modalidadesPossiveis.push("A1");
+                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("L6");
+                        }
+
+                        else if (etnia === "indigena" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "nao" && deficiencia === "nao") {
+                            modalidadesPossiveis.push("A1");
+                            modalidadesPossiveis.push("L5");
+                        }
+
+                        else if (etnia === "indigena" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "nao" && deficiencia === "sim") {
+                            modalidadesPossiveis.push("A1");
+                            modalidadesPossiveis.push("L1");
+                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("L9");
+                            modalidadesPossiveis.push("L13");
+                        }
+
+                        else if (etnia === "indigena" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "sim" && deficiencia === "sim") {
+                            modalidadesPossiveis.push("A1");
+                            modalidadesPossiveis.push("L1");
+                            modalidadesPossiveis.push("L2");
+                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("L6");
+                            modalidadesPossiveis.push("L9");
+                            modalidadesPossiveis.push("L10");
+                            modalidadesPossiveis.push("L13");
+                            modalidadesPossiveis.push("L14");
+                        }
+
+                        else if (etnia === "indigena" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "sim" && deficiencia === "sim") {
+                            modalidadesPossiveis.push("A1");
+                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("L6");
+                            modalidadesPossiveis.push("L13");
+                            modalidadesPossiveis.push("L14");
+                        }
+
+                        else if (etnia === "indigena" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "nao" && deficiencia === "sim") {
+                            modalidadesPossiveis.push("A1");
+                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("L13");
+                        }
+
+
+
+
+
+
+
+
+                        else if (etnia === "quilombola" && escolaPublica === "nao") {
+                            modalidadesPossiveis.push("AC");
+                            modalidadesPossiveis.push("A1 - Indígena");
+                        }
+
+                        else if (etnia === "quilombola" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "nao" && deficiencia === "nao") {
+                            modalidadesPossiveis.push("A2");
+                            modalidadesPossiveis.push("L1");
+                            modalidadesPossiveis.push("L5");
+                        }
+
+                        else if (etnia === "quilombola" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "sim" && deficiencia === "nao") {
+                            modalidadesPossiveis.push("A2");
+                            modalidadesPossiveis.push("L1");
+                            modalidadesPossiveis.push("L2");
+                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("L6");
+                        }
+
+                        else if (etnia === "quilombola" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "sim" && deficiencia === "nao") {
+                            modalidadesPossiveis.push("A2");
+                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("L6");
+                        }
+
+                        else if (etnia === "quilombola" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "sim" && deficiencia === "nao") {
+                            modalidadesPossiveis.push("A2");
+                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("L6");
+                        }
+
+                        else if (etnia === "quilombola" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "nao" && deficiencia === "nao") {
+                            modalidadesPossiveis.push("A2");
+                            modalidadesPossiveis.push("L5");
+                        }
+
+                        else if (etnia === "quilombola" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "nao" && deficiencia === "sim") {
+                            modalidadesPossiveis.push("A2");
+                            modalidadesPossiveis.push("L1");
+                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("L9");
+                            modalidadesPossiveis.push("L13");
+                        }
+
+                        else if (etnia === "quilombola" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "sim" && deficiencia === "sim") {
+                            modalidadesPossiveis.push("A2");
+                            modalidadesPossiveis.push("L1");
+                            modalidadesPossiveis.push("L2");
+                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("L6");
+                            modalidadesPossiveis.push("L9");
+                            modalidadesPossiveis.push("L10");
+                            modalidadesPossiveis.push("L13");
+                            modalidadesPossiveis.push("L14");
+                        }
+
+                        else if (etnia === "quilombola" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "sim" && deficiencia === "sim") {
+                            modalidadesPossiveis.push("A2");
+                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("L6");
+                            modalidadesPossiveis.push("L13");
+                            modalidadesPossiveis.push("L14");
+                        }
+
+                        else if (etnia === "quilombola" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "nao" && deficiencia === "sim") {
+                            modalidadesPossiveis.push("A2");
+                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("L13");
+                        }
+
+
+
                         return modalidadesPossiveis;
                     }
                 </script>
@@ -391,55 +544,50 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="eduexp p-5 pt-0">
-                                            <h5>A0 - Acesso universal / Ampla concorrência</h5>
-                                            <small class="text-brand">O que é o GitHub</small>
-                                            <p class="mb-0">...</p>
+                                            <h5>AC</h5>
+                                            <small class="text-brand"></small>
+                                            <p class="mb-0">Ampla concorrência</p>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="eduexp p-5 pt-0">
-                                            <h5>L1 - Escola pública e renda inferior</h5>
-                                            <small class="text-brand">Criação do seu primeiro repositório</small>
-                                            <p class="mb-0">candidato egresso do Sistema Público de Ensino Médio com
-                                                renda
-                                                familiar
-                                                bruta mensal igual ou inferior a 1,5 salário mínimo nacional per
-                                                capita;</p>
+                                            <h5>A1</h5>
+                                            <small class="text-brand"></small>
+                                            <p class="mb-0">Indígenas</p>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="eduexp p-5 pt-0">
-                                            <h5>L2 - Escola pública, renda inferior e autodeclarado preto, pardo ou
-                                                indígena
-                                            </h5>
-                                            <small class="text-brand">Trabalhando com as Branches</small>
-                                            <p class="mb-0">candidato egresso Sistema Público de Ensino Médio com
-                                                renda
-                                                familiar
-                                                bruta mensal igual ou inferior a 1,5 salário mínimo nacional per
-                                                capita
-                                                autodeclarado preto, pardo ou indígena;</p>
+                                            <h5>A2</h5>
+                                            <small class="text-brand"></small>
+                                            <p class="mb-0">Quilombolas</p>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="eduexp p-5 pt-0">
-                                            <h5>L3/L5 - Escola pública e renda não considerada</h5>
-                                            <small class="text-brand">Trabalhando com as commits</small>
-                                            <p class="mb-0">candidato egresso do Sistema Público de Ensino Médio
-                                                independentemente
-                                                da renda familiar;</p>
+                                            <h5>L1</h5>
+                                            <small class="text-brand"></small>
+                                            <p class="mb-0">Candidatos com renda familiar bruta per capita igual ou
+                                                inferior a 1,5 salário mínimo que tenham cursado integralmente o ensino
+                                                médio em escolas públicas;</p>
                                         </div>
                                     </div>
                                     <div class="col-12">
-                                        <div class="eduexp p-5 pt-0 pb-0">
-                                            <h5>L4/L6 - Escola pública, renda não considerada e preto, pardo ou
-                                                indígena
-                                            </h5>
-                                            <small class="text-brand">Trabalhando com os pull requests</small>
-                                            <p class="mb-0">candidato egresso do Sistema Público de Ensino Médio
-                                                independentemente
-                                                da
-                                                renda familiar, autodeclarado preto, pardo ou indígena.</p>
+                                        <div class="eduexp p-5 pt-0">
+                                            <h5>L2</h5>
+                                            <small class="text-brand"></small>
+                                            <p class="mb-0">Candidatos autodeclarados pretos, pardos ou indígenas, com
+                                                renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo e
+                                                que tenham cursado integralmente o ensino médio em escolas públicas;
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="eduexp p-5 pt-0">
+                                            <h5>L5</h5>
+                                            <small class="text-brand"></small>
+                                            <p class="mb-0">Candidatos que, independentemente da renda, tenham cursado
+                                                integralmente o ensino médio em escolas públicas;</p>
                                         </div>
                                     </div>
                                 </div>
@@ -448,52 +596,47 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="eduexp p-5 pt-0">
-                                            <h5>L9 - Escola pública, renda inferior e pessoa com deficiência</h5>
-                                            <small class="text-brand">Etapa final</small>
-                                            <p class="mb-0">candidato egresso do Sistema Público de Ensino Médio com
-                                                renda
-                                                familiar
-                                                bruta mensal igual ou inferior a 1,5 salário mínimo nacional per
-                                                capita e
-                                                Pessoa com
-                                                Deficiência;</p>
+                                            <h5>L6</h5>
+                                            <small class="text-brand"></small>
+                                            <p class="mb-0">Candidatos autodeclarados pretos, pardos ou indígenas que,
+                                                independentemente da renda, tenham cursado integralmente o ensino médio
+                                                em escolas públicas; </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="eduexp p-5 pt-0">
+                                            <h5>L9</h5>
+                                            <small class="text-brand"></small>
+                                            <p class="mb-0">Candidatos com deficiência que tenham renda familiar bruta
+                                                per capita igual ou inferior a 1,5 salário mínimo e que tenham cursado
+                                                integralmente o ensino médio em escolas públicas;</p>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="eduexp p-5 pt-0">
                                             <h5>L10</h5>
-                                            <small class="text-brand">Trabalhando com os pull requests</small>
-                                            <p class="mb-0">candidato egresso Sistema Público de Ensino Médio com
-                                                renda
-                                                familiar
-                                                bruta
-                                                mensal igual ou inferior a 1,5 salário mínimo nacional per capita
-                                                autodeclarado
-                                                preto,
-                                                pardo ou indígena e Pessoa com Deficiência;</p>
+                                            <small class="text-brand"></small>
+                                            <p class="mb-0">Candidatos com deficiência autodeclarados pretos, pardos ou
+                                                indígenas, que tenham renda familiar bruta per capita igual ou inferior
+                                                a 1,5 salário mínimo e que tenham cursado integralmente o ensino médio
+                                                em escolas públicas; </p>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="eduexp p-5 pt-0">
-                                            <h5>L13 - Escola pública e pessoa com deficiência</h5>
-                                            <small class="text-brand">Etapa final</small>
-                                            <p class="mb-0">candidato egresso do Sistema Público de Ensino Médio
-                                                independentemente
-                                                da renda familiar e Pessoa com Deficiência;</p>
+                                            <h5>L13</h5>
+                                            <small class="text-brand"></small>
+                                            <p class="mb-0">Candidatos com deficiência que, independentemente da renda,
+                                                tenham cursado integralmente o ensino médio em escolas públicas; </p>
                                         </div>
                                     </div>
                                     <div class="col-12">
                                         <div class="eduexp p-5 pt-0 pb-0">
-                                            <h5>L14 - Escola pública, renda não considerada, preto, pardo ou
-                                                indígena e
-                                                pessoa com
-                                                deficiência</h5>
-                                            <small class="text-brand">Etapa final</small>
-                                            <p class="mb-0">candidato egresso do Sistema Público de Ensino Médio
-                                                independentemente
-                                                da renda familiar, autodeclarado preto, pardo ou indígena e Pessoa
-                                                com
-                                                Deficiência.
+                                            <h5>L14</h5>
+                                            <small class="text-brand"></small>
+                                            <p class="mb-0">Candidatos com deficiência autodeclarados pretos, pardos ou
+                                                indígenas que, independentemente da renda , tenham cursado integralmente
+                                                o ensino médio em escolas públicas.
                                             </p>
                                         </div>
                                     </div>
@@ -505,44 +648,33 @@
 
 
 
-                <footer class="mt-5 py-5">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-md-4 text-center">
-                                <div class="footer-logo">
-                                    <img src="../img/Logo-UFT.png" class="img-fluid"
-                                        style="max-width: 100px; height: auto;">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row justify-content-center mt-3">
-                            <div class="col-md-4 text-center">
-                                <p class="mb-0">Copyright 2023 | Feito por Deusmar Borba</p>
-                            </div>
-                        </div>
+                 <footer class="mt-5 py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-4 text-center">
+                    <div class="footer-logo">
+                        <img src="../img/Logo-UFT.png" class="img-fluid" style="max-width: 100px; height: auto;">
                     </div>
-                </footer>
-
-
-
-                <div class="scroll-up-btn">
-                    <ion-icon name="arrow-up-circle-outline"></ion-icon>
                 </div>
-
-
-
-                <!-- Bootstrap JS-->
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-
-                <!-- Outros-->
-                <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-
-                <!-- Icons e outros-->
-                <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
-                <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-                <!--JS do código-->
-                <script src="../js/main.js"></script>
+            </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col-md-4 text-center">
+                    <p class="mb-0">Copyright 2023 | Feito por Deusmar Borba</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="scroll-up-btn">
+        <ion-icon name="arrow-up-circle-outline"></ion-icon>
+    </div>
+    <!-- Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Outros-->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <!-- Icons e outros-->
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- JS do código -->
+    <script src="../js/main.js"></script>
 </body>
-
 </html>
