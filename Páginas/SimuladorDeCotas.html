@@ -87,7 +87,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="display-2 fw-bold" data-aos="fade-up">Bem vindo ao nosso <span
+                    <h1 class="display-2 fw-bold" data-aos="fade-up">Bem - vindo ao nosso <span
                             class="text-brand">Simulador de Cotas</span></h1>
                     <h4 data-aos="fade-up" data-aos-delay="100" class="mt-3 mb-5">Uma pesquisa mais rápida!</h4>
                     <div data-aos="fade-up" data-aos-delay="200"><a href="#Simulador" class="btn btn-brand">Teste
@@ -268,77 +268,77 @@
                         const [etnia, escolaPublica, renda, etniaDeclarada, deficiencia] = answers;
 
                         if (etnia === "nao" && escolaPublica === "nao") {
-                            modalidadesPossiveis.push("AC");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
                         }
 
                         else if (etnia === "indigena" && escolaPublica === "nao") {
-                            modalidadesPossiveis.push("AC");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
                             modalidadesPossiveis.push("A1 - Indígena");
                         }
 
                         else if (etnia === "nao" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "nao" && deficiencia === "nao") {
-                            modalidadesPossiveis.push("AC");
-                            modalidadesPossiveis.push("L1");
-                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("L1 – Candidatos com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo que tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
                         }
 
                         else if (etnia === "nao" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "sim" && deficiencia === "nao") {
-                            modalidadesPossiveis.push("AC");
-                            modalidadesPossiveis.push("L1");
-                            modalidadesPossiveis.push("L2");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L6");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("L1 – Candidatos com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo que tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L2 - Candidatos autodeclarados pretos, pardos ou indígenas, com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L6 - Candidatos autodeclarados pretos, pardos ou indígenas que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
                         }
 
                         else if (etnia === "nao" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "sim" && deficiencia === "nao") {
-                            modalidadesPossiveis.push("AC");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L6");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L6 - Candidatos autodeclarados pretos, pardos ou indígenas que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
                         }
 
                         else if (etnia === "nao" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "sim" && deficiencia === "nao") {
-                            modalidadesPossiveis.push("AC");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L6");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L6 - Candidatos autodeclarados pretos, pardos ou indígenas que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
                         }
 
                         else if (etnia === "nao" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "nao" && deficiencia === "nao") {
-                            modalidadesPossiveis.push("AC");
-                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
                         }
 
                         else if (etnia === "nao" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "nao" && deficiencia === "sim") {
-                            modalidadesPossiveis.push("AC");
-                            modalidadesPossiveis.push("L1");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L9");
-                            modalidadesPossiveis.push("L13");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("L1 – Candidatos com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo que tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L9 - Candidatos com deficiência que tenham renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L13 - Candidatos com deficiência que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
                         }
 
                         else if (etnia === "nao" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "sim" && deficiencia === "sim") {
-                            modalidadesPossiveis.push("AC");
-                            modalidadesPossiveis.push("L1");
-                            modalidadesPossiveis.push("L2");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L6");
-                            modalidadesPossiveis.push("L9");
-                            modalidadesPossiveis.push("L10");
-                            modalidadesPossiveis.push("L13");
-                            modalidadesPossiveis.push("L14");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("L1 – Candidatos com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo que tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L2 - Candidatos autodeclarados pretos, pardos ou indígenas, com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L6 - Candidatos autodeclarados pretos, pardos ou indígenas que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L9 - Candidatos com deficiência que tenham renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L10 - Candidatos com deficiência autodeclarados pretos, pardos ou indígenas, que tenham renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L13 - Candidatos com deficiência que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L14 - Candidatos com deficiência autodeclarados pretos, pardos ou indígenas que, independentemente da renda , tenham cursado integralmente o ensino médio em escolas públicas.");
                         }
 
                         else if (etnia === "nao" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "sim" && deficiencia === "sim") {
-                            modalidadesPossiveis.push("AC");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L6");
-                            modalidadesPossiveis.push("L13");
-                            modalidadesPossiveis.push("L14");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L6 - Candidatos autodeclarados pretos, pardos ou indígenas que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L13 - Candidatos com deficiência que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L14 - Candidatos com deficiência autodeclarados pretos, pardos ou indígenas que, independentemente da renda , tenham cursado integralmente o ensino médio em escolas públicas.");
                         }
 
                         else if (etnia === "nao" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "nao" && deficiencia === "sim") {
-                            modalidadesPossiveis.push("AC");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L13");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L13 - Candidatos com deficiência que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
                         }
 
 
@@ -348,73 +348,82 @@
 
 
                         else if (etnia === "indigena" && escolaPublica === "nao") {
-                            modalidadesPossiveis.push("AC");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
                             modalidadesPossiveis.push("A1 - Indígena");
                         }
 
                         else if (etnia === "indigena" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "nao" && deficiencia === "nao") {
-                            modalidadesPossiveis.push("A1");
-                            modalidadesPossiveis.push("L1");
-                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A1 - Indígena");
+                            modalidadesPossiveis.push("L1 – Candidatos com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo que tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
                         }
 
                         else if (etnia === "indigena" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "sim" && deficiencia === "nao") {
-                            modalidadesPossiveis.push("A1");
-                            modalidadesPossiveis.push("L1");
-                            modalidadesPossiveis.push("L2");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L6");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A1 - Indígena");
+                            modalidadesPossiveis.push("L1 – Candidatos com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo que tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L2 - Candidatos autodeclarados pretos, pardos ou indígenas, com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L6 - Candidatos autodeclarados pretos, pardos ou indígenas que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
                         }
 
                         else if (etnia === "indigena" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "sim" && deficiencia === "nao") {
-                            modalidadesPossiveis.push("A1");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L6");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A1 - Indígena");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L6 - Candidatos autodeclarados pretos, pardos ou indígenas que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
                         }
 
                         else if (etnia === "indigena" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "sim" && deficiencia === "nao") {
-                            modalidadesPossiveis.push("A1");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L6");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A1 - Indígena");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L6 - Candidatos autodeclarados pretos, pardos ou indígenas que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
                         }
 
                         else if (etnia === "indigena" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "nao" && deficiencia === "nao") {
-                            modalidadesPossiveis.push("A1");
-                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A1 - Indígena");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
                         }
 
                         else if (etnia === "indigena" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "nao" && deficiencia === "sim") {
-                            modalidadesPossiveis.push("A1");
-                            modalidadesPossiveis.push("L1");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L9");
-                            modalidadesPossiveis.push("L13");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A1 - Indígena");
+                            modalidadesPossiveis.push("L1 – Candidatos com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo que tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L9 - Candidatos com deficiência que tenham renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L13 - Candidatos com deficiência que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
                         }
 
                         else if (etnia === "indigena" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "sim" && deficiencia === "sim") {
-                            modalidadesPossiveis.push("A1");
-                            modalidadesPossiveis.push("L1");
-                            modalidadesPossiveis.push("L2");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L6");
-                            modalidadesPossiveis.push("L9");
-                            modalidadesPossiveis.push("L10");
-                            modalidadesPossiveis.push("L13");
-                            modalidadesPossiveis.push("L14");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A1 - Indígena");
+                            modalidadesPossiveis.push("L1 – Candidatos com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo que tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L2 - Candidatos autodeclarados pretos, pardos ou indígenas, com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L6 - Candidatos autodeclarados pretos, pardos ou indígenas que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L9 - Candidatos com deficiência que tenham renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L10 - Candidatos com deficiência autodeclarados pretos, pardos ou indígenas, que tenham renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L13 - Candidatos com deficiência que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L14 - Candidatos com deficiência autodeclarados pretos, pardos ou indígenas que, independentemente da renda , tenham cursado integralmente o ensino médio em escolas públicas.");
                         }
 
                         else if (etnia === "indigena" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "sim" && deficiencia === "sim") {
-                            modalidadesPossiveis.push("A1");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L6");
-                            modalidadesPossiveis.push("L13");
-                            modalidadesPossiveis.push("L14");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A1 - Indígena");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L6 - Candidatos autodeclarados pretos, pardos ou indígenas que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L13 - Candidatos com deficiência que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L14 - Candidatos com deficiência autodeclarados pretos, pardos ou indígenas que, independentemente da renda , tenham cursado integralmente o ensino médio em escolas públicas.");
                         }
 
                         else if (etnia === "indigena" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "nao" && deficiencia === "sim") {
-                            modalidadesPossiveis.push("A1");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L13");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A1 - Indígena");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L13 - Candidatos com deficiência que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
                         }
 
 
@@ -425,73 +434,82 @@
 
 
                         else if (etnia === "quilombola" && escolaPublica === "nao") {
-                            modalidadesPossiveis.push("AC");
-                            modalidadesPossiveis.push("A1 - Indígena");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A2 - Quilombola");
                         }
 
                         else if (etnia === "quilombola" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "nao" && deficiencia === "nao") {
-                            modalidadesPossiveis.push("A2");
-                            modalidadesPossiveis.push("L1");
-                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A2 - Quilombola");
+                            modalidadesPossiveis.push("L1 – Candidatos com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo que tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
                         }
 
                         else if (etnia === "quilombola" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "sim" && deficiencia === "nao") {
-                            modalidadesPossiveis.push("A2");
-                            modalidadesPossiveis.push("L1");
-                            modalidadesPossiveis.push("L2");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L6");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A2 - Quilombola");
+                            modalidadesPossiveis.push("L1 – Candidatos com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo que tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L2 - Candidatos autodeclarados pretos, pardos ou indígenas, com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L6 - Candidatos autodeclarados pretos, pardos ou indígenas que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
                         }
 
                         else if (etnia === "quilombola" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "sim" && deficiencia === "nao") {
-                            modalidadesPossiveis.push("A2");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L6");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A2 - Quilombola");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L6 - Candidatos autodeclarados pretos, pardos ou indígenas que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
                         }
 
                         else if (etnia === "quilombola" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "sim" && deficiencia === "nao") {
-                            modalidadesPossiveis.push("A2");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L6");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A2 - Quilombola");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L6 - Candidatos autodeclarados pretos, pardos ou indígenas que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
                         }
 
                         else if (etnia === "quilombola" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "nao" && deficiencia === "nao") {
-                            modalidadesPossiveis.push("A2");
-                            modalidadesPossiveis.push("L5");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A2 - Quilombola");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
                         }
 
                         else if (etnia === "quilombola" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "nao" && deficiencia === "sim") {
-                            modalidadesPossiveis.push("A2");
-                            modalidadesPossiveis.push("L1");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L9");
-                            modalidadesPossiveis.push("L13");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A2 - Quilombola");
+                            modalidadesPossiveis.push("L1 – Candidatos com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo que tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L9 - Candidatos com deficiência que tenham renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L13 - Candidatos com deficiência que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
                         }
 
                         else if (etnia === "quilombola" && escolaPublica === "sim" && renda === "sim" && etniaDeclarada === "sim" && deficiencia === "sim") {
-                            modalidadesPossiveis.push("A2");
-                            modalidadesPossiveis.push("L1");
-                            modalidadesPossiveis.push("L2");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L6");
-                            modalidadesPossiveis.push("L9");
-                            modalidadesPossiveis.push("L10");
-                            modalidadesPossiveis.push("L13");
-                            modalidadesPossiveis.push("L14");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A2 - Quilombola");
+                            modalidadesPossiveis.push("L1 – Candidatos com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo que tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L2 - Candidatos autodeclarados pretos, pardos ou indígenas, com renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L6 - Candidatos autodeclarados pretos, pardos ou indígenas que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L9 - Candidatos com deficiência que tenham renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L10 - Candidatos com deficiência autodeclarados pretos, pardos ou indígenas, que tenham renda familiar bruta per capita igual ou inferior a 1,5 salário mínimo e que tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L13 - Candidatos com deficiência que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L14 - Candidatos com deficiência autodeclarados pretos, pardos ou indígenas que, independentemente da renda , tenham cursado integralmente o ensino médio em escolas públicas.");
                         }
 
                         else if (etnia === "quilombola" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "sim" && deficiencia === "sim") {
-                            modalidadesPossiveis.push("A2");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L6");
-                            modalidadesPossiveis.push("L13");
-                            modalidadesPossiveis.push("L14");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A2 - Quilombola");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L6 - Candidatos autodeclarados pretos, pardos ou indígenas que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L13 - Candidatos com deficiência que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
+                            modalidadesPossiveis.push("L14 - Candidatos com deficiência autodeclarados pretos, pardos ou indígenas que, independentemente da renda , tenham cursado integralmente o ensino médio em escolas públicas.");
                         }
 
                         else if (etnia === "quilombola" && escolaPublica === "sim" && renda === "nao" && etniaDeclarada === "nao" && deficiencia === "sim") {
-                            modalidadesPossiveis.push("A2");
-                            modalidadesPossiveis.push("L5");
-                            modalidadesPossiveis.push("L13");
+                            modalidadesPossiveis.push("AC - Ampla Concorrência");
+                            modalidadesPossiveis.push("A2 - Quilombola");
+                            modalidadesPossiveis.push("L5 - Candidatos que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas; ");
+                            modalidadesPossiveis.push("L13 - Candidatos com deficiência que, independentemente da renda, tenham cursado integralmente o ensino médio em escolas públicas;");
                         }
 
 
@@ -653,7 +671,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-4 text-center">
                     <div class="footer-logo">
-                        <img src="../img/Logo-UFT.png" class="img-fluid" style="max-width: 100px; height: auto;">
+                        <img src="../img/marcaUFT_vertical_fundotransparente_RGB.png" class="img-fluid" style="max-width: 150px; height: auto;">
                     </div>
                 </div>
             </div>
