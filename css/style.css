@@ -228,10 +228,19 @@ img {
 
 /* Home */
 #home {
-    background-image: url(../img/TelaInicialProfissional.jpeg);
-    background-position: center top;
-    background-size: cover;
+  background-image: url(../img/TelaInicialProfissional.jpeg);
+  background-position: center top; /* Padrão para desktop */
+  background-size: cover;
 }
+
+/* Estilos específicos para telas menores (por exemplo, largura máxima de 768px) */
+@media (max-width: 768px) {
+  #home {
+      background-position: center center; /* Centraliza verticalmente e horizontalmente na tela do telefone */
+  }
+}
+
+
 
 /*
   
