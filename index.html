@@ -84,7 +84,6 @@
   </nav>
 
 
-
   <!-- Home -->
   <section id="home" class="d-flex align-items-center min-vh-100">
     <div class="container">
@@ -1841,6 +1840,41 @@
       </div>
     </div>
   </section>
+
+
+  <section id="Contato" class="section-padding section-connector">
+    <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="setion-title text-center">
+              <h1>Contador de visualizações</h1>
+              <p>Abaixo está mostrando quantas vezes a página foi acessada e consultada.</p>
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
+
+   <!-- Elemento para exibir o contador de visualizações centralizado no final da página -->
+   <div id="pageViews" style="text-align: center; margin-top: 20px;">Visualizações</div>
+
+   <script>
+       // JavaScript para atualizar o contador de visualizações
+       let pageViews = 0;
+ 
+       // Verifique se há um valor armazenado na sessão para o contador
+       if (sessionStorage.getItem("pageViews")) {
+           pageViews = parseInt(sessionStorage.getItem("pageViews"));
+       }
+ 
+       // Atualize o contador e armazene-o na sessão
+       pageViews++;
+       sessionStorage.setItem("pageViews", pageViews);
+ 
+       // Exiba o contador centralizado no final da página
+       document.getElementById("pageViews").textContent = pageViews + " Visualizações";
+   </script>
+   </div>
+   </section>
 
 
 
